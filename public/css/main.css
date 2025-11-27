@@ -314,6 +314,14 @@ footer img:hover {
     transform: scale(1.04);
     opacity: 1;
 }
+.footer-link {
+    transition: color 0.25s ease, padding-left 0.25s ease;
+}
+
+.footer-link:hover {
+    color: var(--brand-yellow);
+    padding-left: 4px;
+}
 
 /* ==========================================================
    MICRO INTERACTIONS
