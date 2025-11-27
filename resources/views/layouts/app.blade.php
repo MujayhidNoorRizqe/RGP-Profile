@@ -2,66 +2,47 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CV. Restu Guru Promosindo — Percetakan modern dan profesional di Indonesia.">
-    <meta name="theme-color" content="#e62129">
-    <title>CV. Restu Guru Promosindo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <title>{{ config('app.name', 'RG Promosindo') }}</title>
+    <meta name="description" content="Percetakan modern dan profesional — Restu Guru Promosindo">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ asset('images/restugurulogo.webp') }}">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS (scroll animation) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 
-<body class="antialiased text-gray-800 bg-white selection:bg-[#fef100]/70 selection:text-black">
+<body id="body-root"
+      class="opacity-0 transition-opacity duration-500 ease-out bg-white text-gray-800">
 
-    {{-- Overlay Page Transition --}}
-    <div id="overlay" class="fixed inset-0 bg-white z-[9999] opacity-100 pointer-events-none transition-opacity duration-700"></div>
+    <!-- Overlay Page Transition -->
+    <div id="overlay"
+         class="fixed inset-0 bg-white z-[9999] opacity-100 pointer-events-none transition-opacity duration-700 ease-out"></div>
 
-    {{-- NAVBAR COMPONENT --}}
+    <!-- NAVBAR -->
     <x-navbar />
 
-    {{-- CONTENT --}}
-    <main class="pt-20 relative z-10">
+    <!-- PAGE CONTENT -->
+    <main class="pt-20 min-h-screen">
         @yield('content')
     </main>
 
-    {{-- FOOTER COMPONENT --}}
+    <!-- FOOTER -->
     <x-footer />
 
-    {{-- SCRIPT --}}
-    <script>
-        // Navbar Scroll Shadow
-        const navbar = document.getElementById("navbar");
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 60) navbar.classList.add("shadow-lg", "bg-white/90");
-            else navbar.classList.remove("shadow-lg", "bg-white/90");
-        });
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-        // Mobile Menu
-        const menuBtn = document.getElementById("menu-btn");
-        const mobileMenu = document.getElementById("mobile-menu");
-        menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
-
-        // Overlay Fade Transition
-        window.addEventListener("load", () => {
-            const overlay = document.getElementById("overlay");
-            overlay.style.opacity = "0";
-            setTimeout(() => overlay.remove(), 700);
-        });
-
-        // Smooth Page Transition
-        const links = document.querySelectorAll("a[href]");
-        links.forEach(link => {
-            const url = link.getAttribute("href");
-
-            if (!url.startsWith("#") && !url.startsWith("mailto:")) {
-                link.addEventListener("click", e => {
-                    e.preventDefault();
-                    document.body.style.opacity = "0";
-                    setTimeout(() => window.location = url, 400);
-                });
-            }
-        });
-    </script>
+    <!-- Global Animation JS -->
+    <script src="/js/anim.js" defer></script>
 
 </body>
 </html>
