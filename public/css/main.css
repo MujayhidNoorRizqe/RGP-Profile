@@ -38,7 +38,7 @@ body {
 }
 
 /* ==========================================================
-   BRAND TEXT COLORS
+   HERO TEXT COLORS
 ========================================================== */
 .hero-red {
     color: var(--brand-red);
@@ -61,7 +61,7 @@ body {
 }
 
 /* ==========================================================
-   PAGE FADE-IN ANIMATION
+   PAGE FADE-IN
 ========================================================== */
 .page-enter {
     opacity: 0;
@@ -76,7 +76,7 @@ body {
 }
 
 /* ==========================================================
-   GLOBAL SECTION
+   GLOBAL SECTIONS
 ========================================================== */
 .section-box {
     padding: 100px 0;
@@ -103,6 +103,14 @@ body {
     font-size: 3.6rem;
     font-weight: 800;
     line-height: 1.15;
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.2rem !important;
+        line-height: 1.25;
+    }
 }
 
 /* ==========================================================
@@ -133,7 +141,7 @@ body {
 }
 
 /* ==========================================================
-   SERVICE ROWS (Home)
+   SERVICE ROWS
 ========================================================== */
 .service-row {
     display: grid;
@@ -143,23 +151,23 @@ body {
     align-items: center;
 }
 
-.service-row.reverse {
-    direction: rtl;
-}
+/* FIX: Remove old RTL method, replace with Tailwind ordering */
 .service-row.reverse .service-text {
-    direction: ltr;
+    order: 2;
+}
+.service-row.reverse .service-image {
+    order: 1;
 }
 
-.service-text h3 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--text-dark);
-}
-
-.service-text p {
-    margin: 15px 0;
-    color: var(--text-light);
-    line-height: 1.65;
+/* Mobile automatically becomes 1 column */
+@media (max-width: 960px) {
+    .service-row {
+        grid-template-columns: 1fr;
+    }
+    .service-row.reverse .service-text,
+    .service-row.reverse .service-image {
+        order: unset;
+    }
 }
 
 .service-image img {
@@ -175,7 +183,7 @@ body {
 }
 
 /* ==========================================================
-   CTA DESIGN
+   CTA
 ========================================================== */
 .cta-section {
     padding: 100px 0;
@@ -214,6 +222,14 @@ body {
     box-shadow: 0 8px 18px var(--mid-shadow);
 }
 
+/* Mobile buttons */
+@media (max-width: 480px) {
+    .btn-primary {
+        width: 100%;
+        padding: 14px 0;
+    }
+}
+
 /* ==========================================================
    NAVBAR
 ========================================================== */
@@ -246,7 +262,7 @@ body {
     width: 100%;
 }
 
-/* Active links multi-color */
+/* Active */
 .nav-active-blue {
     color: var(--brand-blue) !important;
 }
@@ -257,14 +273,7 @@ body {
     color: var(--brand-yellow) !important;
 }
 
-.nav-active-blue::after,
-.nav-active-red::after,
-.nav-active-yellow::after {
-    width: 100% !important;
-    background: var(--rg-gradient);
-}
-
-/* Navbar shrink */
+/* Shrink */
 .navbar-shrink {
     padding: 10px 0 !important;
     background: rgba(255, 255, 255, 0.92) !important;
@@ -314,20 +323,28 @@ footer img:hover {
 }
 
 /* ==========================================================
-   RESPONSIVE
+   FULL RESPONSIVE OPTIMIZATION
 ========================================================== */
 @media (max-width: 960px) {
+    .section-box {
+        padding: 70px 0;
+    }
     .value-grid {
         grid-template-columns: 1fr;
     }
-    .service-row,
-    .service-row.reverse {
-        grid-template-columns: 1fr;
-        direction: ltr;
-    }
 }
+
 @media (max-width: 480px) {
     .section-title {
         font-size: 1.9rem;
+    }
+    .section-box {
+        padding: 50px 0;
+    }
+    .service-image img {
+        height: 220px;
+    }
+    .value-img {
+        height: 150px;
     }
 }
