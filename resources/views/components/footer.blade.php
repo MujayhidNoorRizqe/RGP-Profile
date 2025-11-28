@@ -1,11 +1,14 @@
-<footer class="mt-20 bg-[#fafafa] border-t border-gray-200/60 pt-14 pb-10">
+<footer class="bg-[#fafafa] border-t border-gray-200 pt-16 pb-10 mt-20">
 
-    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-14">
+    {{-- =====================================================
+         DESKTOP FOOTER (md ke atas)
+    ====================================================== --}}
+    <div class="hidden md:grid max-w-7xl mx-auto px-6 md:grid-cols-4 gap-14">
 
-        <!-- LOGO + TAGLINE -->
-        <div class="text-center md:text-left">
+        {{-- LOGO + TAGLINE --}}
+        <div>
             <img src="{{ asset('images/restugurulogo.webp') }}"
-                 class="h-12 mb-4 mx-auto md:mx-0 soft-float" alt="Logo">
+                 class="h-14 mb-4 soft-float" alt="Logo">
 
             <h3 class="text-lg font-semibold text-gray-900">
                 CV. Restu Guru Promosindo
@@ -16,7 +19,7 @@
                 presisi, dan pelayanan profesional.
             </p>
 
-            <!-- JAM OPERASIONAL -->
+            {{-- Jam Operasional --}}
             <div class="mt-5">
                 <h4 class="font-semibold text-gray-900 mb-1 text-sm">Jam Operasional</h4>
                 <p class="text-gray-500 text-sm leading-relaxed">
@@ -27,71 +30,111 @@
         </div>
 
 
-        <!-- NAVIGASI -->
-        <div class="text-center md:text-left">
+        {{-- NAVIGASI --}}
+        <div>
             <h4 class="font-semibold text-gray-900 mb-4">Navigasi</h4>
             <ul class="space-y-2 text-sm text-gray-600">
-                <li><a href="{{ route('home') }}" class="footer-link rg-hover">Home</a></li>
-                <li><a href="{{ route('about') }}" class="footer-link rg-hover">Tentang</a></li>
-                <li><a href="{{ route('services') }}" class="footer-link rg-hover">Layanan</a></li>
-                <li><a href="{{ route('contact') }}" class="footer-link rg-hover">Kontak</a></li>
+                <li><a href="{{ route('home') }}" class="footer-link">Home</a></li>
+                <li><a href="{{ route('about') }}" class="footer-link">Tentang</a></li>
+                <li><a href="{{ route('services') }}" class="footer-link">Layanan</a></li>
+                <li><a href="{{ route('contact') }}" class="footer-link">Kontak</a></li>
             </ul>
         </div>
 
 
-        <!-- LAYANAN -->
-        <div class="text-center md:text-left">
+        {{-- LAYANAN --}}
+        <div>
             <h4 class="font-semibold text-gray-900 mb-4">Layanan</h4>
             <ul class="space-y-2 text-sm text-gray-600">
-                <li><a href="{{ route('services') }}" class="footer-link rg-hover">Indoor Printing</a></li>
-                <li><a href="{{ route('services') }}" class="footer-link rg-hover">Outdoor Printing</a></li>
-                <li><a href="{{ route('services') }}" class="footer-link rg-hover">Merch & Multi Product</a></li>
+                <li><a href="{{ route('services') }}" class="footer-link">Indoor Printing</a></li>
+                <li><a href="{{ route('services') }}" class="footer-link">Outdoor Printing</a></li>
+                <li><a href="{{ route('services') }}" class="footer-link">Merch & Multi Product</a></li>
             </ul>
         </div>
 
 
-        <!-- SOSIAL + MULTI LOKASI -->
-        <div class="text-center md:text-left">
-
-            <!-- SOSIAL MEDIA -->
+        {{-- SOSMED + LOKASI --}}
+        <div>
             <h4 class="font-semibold text-gray-900 mb-4">Ikuti Kami</h4>
             <ul class="space-y-2 text-sm text-gray-600 mb-6">
-                <li>
-                    <a href="#" class="footer-link flex items-center gap-2 md:justify-start justify-center rg-hover">
-                        <span>📘</span> Facebook
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link flex items-center gap-2 md:justify-start justify-center rg-hover">
-                        <span>📷</span> Instagram
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link flex items-center gap-2 md:justify-start justify-center rg-hover">
-                        <span>▶️</span> YouTube
-                    </a>
-                </li>
+                <li><a href="#" class="footer-link flex items-center gap-2"><span>📘</span> Facebook</a></li>
+                <li><a href="#" class="footer-link flex items-center gap-2"><span>📷</span> Instagram</a></li>
+                <li><a href="#" class="footer-link flex items-center gap-2"><span>▶️</span> YouTube</a></li>
             </ul>
 
-            <!-- MULTI LOKASI -->
             <h4 class="font-semibold text-gray-900 mb-2 text-sm">Lokasi Kantor</h4>
-
             <ul class="space-y-2 text-sm text-gray-600">
-                <li class="flex gap-2 md:justify-start justify-center"><span>📍</span> Banjarbaru</li>
-                <li class="flex gap-2 md:justify-start justify-center"><span>📍</span> Banjar</li>
-                <li class="flex gap-2 md:justify-start justify-center"><span>📍</span> Banjarmasin</li>
-                <li class="flex gap-2 md:justify-start justify-center"><span>📍</span> Martapura</li>
-                <li class="flex gap-2 md:justify-start justify-center"><span>📍</span> Lianganggang</li>
-                <li class="flex gap-2 md:justify-start justify-center"><span>📍</span> Pelaihari</li>
+                <li>📍 Banjarbaru</li>
+                <li>📍 Banjar</li>
+                <li>📍 Banjarmasin</li>
+                <li>📍 Martapura</li>
+                <li>📍 Liang Anggang</li>
+                <li>📍 Pelaihari</li>
             </ul>
         </div>
 
     </div>
 
-    <!-- COPYRIGHT -->
-    <div class="text-center mt-12 pt-6 border-t border-gray-200">
-        <div class="w-32 h-1 mx-auto mb-4 rounded-full rg-bar"></div>
 
+
+
+    {{-- =====================================================
+         MOBILE FOOTER (0–md)
+    ====================================================== --}}
+    <div class="md:hidden max-w-xl mx-auto px-6 space-y-12">
+
+        {{-- LOGO --}}
+        <div class="text-center">
+            <img src="{{ asset('images/restugurulogo.webp') }}" class="h-14 mx-auto soft-float">
+            <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                Percetakan modern dengan kualitas premium & pelayanan profesional.
+            </p>
+        </div>
+
+
+        {{-- MENU --}}
+        <div class="text-center">
+            <h4 class="font-semibold text-gray-900 mb-4">Menu</h4>
+            <ul class="space-y-2 text-sm text-gray-600">
+                <li><a href="{{ route('home') }}" class="footer-link">Home</a></li>
+                <li><a href="{{ route('about') }}" class="footer-link">Tentang</a></li>
+                <li><a href="{{ route('services') }}" class="footer-link">Layanan</a></li>
+                <li><a href="{{ route('contact') }}" class="footer-link">Kontak</a></li>
+            </ul>
+        </div>
+
+
+        {{-- Sosmed --}}
+        <div class="text-center">
+            <h4 class="font-semibold text-gray-900 mb-4">Ikuti Kami</h4>
+            <ul class="space-y-2 text-sm text-gray-600">
+                <li><a href="#" class="footer-link flex justify-center gap-2"><span>📘</span> Facebook</a></li>
+                <li><a href="#" class="footer-link flex justify-center gap-2"><span>📷</span> Instagram</a></li>
+                <li><a href="#" class="footer-link flex justify-center gap-2"><span>▶️</span> YouTube</a></li>
+            </ul>
+        </div>
+
+
+        {{-- Lokasi --}}
+        <div class="text-center">
+            <h4 class="font-semibold text-gray-900 mb-4">Lokasi Kantor</h4>
+            <ul class="space-y-1 text-sm text-gray-600">
+                <li>📍 Banjarbaru</li>
+                <li>📍 Banjar</li>
+                <li>📍 Banjarmasin</li>
+                <li>📍 Martapura</li>
+                <li>📍 Liang Anggang</li>
+                <li>📍 Pelaihari</li>
+            </ul>
+        </div>
+
+    </div>
+
+
+
+
+    {{-- COPYRIGHT --}}
+    <div class="text-center mt-16 pt-6 border-t border-gray-200">
         <p class="text-gray-400 text-xs">
             © {{ date('Y') }} Restu Guru Promosindo — All rights reserved.
         </p>

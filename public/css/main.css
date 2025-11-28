@@ -3,7 +3,8 @@
 /* ==========================================================
    GLOBAL BASE
 ========================================================== */
-html, body {
+html,
+body {
     font-family: "Inter", sans-serif;
     background-color: #fafafa;
     scroll-behavior: smooth;
@@ -22,9 +23,9 @@ html, body {
     --text-dark: #0f0f0f;
     --text-light: #6c6c6c;
 
-    --soft-shadow: rgba(0,0,0,0.08);
-    --mid-shadow: rgba(0,0,0,0.14);
-    --strong-shadow: rgba(0,0,0,0.22);
+    --soft-shadow: rgba(0, 0, 0, 0.08);
+    --mid-shadow: rgba(0, 0, 0, 0.14);
+    --strong-shadow: rgba(0, 0, 0, 0.22);
 
     --rg-gradient: linear-gradient(
         90deg,
@@ -39,10 +40,18 @@ html, body {
 /* ==========================================================
    BRAND TEXT COLORS
 ========================================================== */
-.hero-red { color: var(--brand-red); }
-.hero-blue { color: var(--brand-blue); }
-.hero-yellow { color: var(--brand-yellow); }
-.hero-dark { color: var(--text-dark); }
+.hero-red {
+    color: var(--brand-red);
+}
+.hero-blue {
+    color: var(--brand-blue);
+}
+.hero-yellow {
+    color: var(--brand-yellow);
+}
+.hero-dark {
+    color: var(--text-dark);
+}
 
 .hero-title span {
     transition: opacity 0.25s ease;
@@ -57,16 +66,21 @@ html, body {
 .page-enter {
     opacity: 0;
     transform: translateY(20px);
-    animation: pageEnterAnim 0.75s cubic-bezier(0.16,1,0.3,1) forwards;
+    animation: pageEnterAnim 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 @keyframes pageEnterAnim {
-    to { opacity: 1; transform: translateY(0); }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ==========================================================
    GLOBAL SECTION
 ========================================================== */
-.section-box { padding: 100px 0; }
+.section-box {
+    padding: 100px 0;
+}
 
 .section-title {
     font-size: 2.4rem;
@@ -100,7 +114,9 @@ html, body {
     gap: 42px;
 }
 
-.value-item { text-align: center; }
+.value-item {
+    text-align: center;
+}
 
 .value-img {
     width: 100%;
@@ -127,8 +143,12 @@ html, body {
     align-items: center;
 }
 
-.service-row.reverse { direction: rtl; }
-.service-row.reverse .service-text { direction: ltr; }
+.service-row.reverse {
+    direction: rtl;
+}
+.service-row.reverse .service-text {
+    direction: ltr;
+}
 
 .service-text h3 {
     font-size: 1.8rem;
@@ -150,7 +170,9 @@ html, body {
     box-shadow: 0 12px 28px var(--soft-shadow);
     transition: 0.35s ease;
 }
-.service-image img:hover { transform: scale(1.02); }
+.service-image img:hover {
+    transform: scale(1.02);
+}
 
 /* ==========================================================
    CTA DESIGN
@@ -182,7 +204,7 @@ html, body {
     font-weight: 600;
     background: var(--brand-blue);
     color: #fff;
-    transition: 0.28s cubic-bezier(0.16,1,0.3,1);
+    transition: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
     box-shadow: 0 5px 14px var(--soft-shadow);
 }
 .btn-primary:hover {
@@ -195,7 +217,9 @@ html, body {
 /* ==========================================================
    NAVBAR
 ========================================================== */
-#navbar { transition: all 0.28s ease; }
+#navbar {
+    transition: all 0.28s ease;
+}
 
 .nav-link {
     color: #444;
@@ -203,7 +227,9 @@ html, body {
     transition: color 0.28s ease;
     padding-bottom: 4px;
 }
-.nav-link:hover { color: var(--brand-blue); }
+.nav-link:hover {
+    color: var(--brand-blue);
+}
 
 .hover-glow::after {
     content: "";
@@ -216,12 +242,20 @@ html, body {
     transition: width 0.35s ease;
     border-radius: 4px;
 }
-.hover-glow:hover::after { width: 100%; }
+.hover-glow:hover::after {
+    width: 100%;
+}
 
 /* Active links multi-color */
-.nav-active-blue { color: var(--brand-blue) !important; }
-.nav-active-red { color: var(--brand-red) !important; }
-.nav-active-yellow { color: var(--brand-yellow) !important; }
+.nav-active-blue {
+    color: var(--brand-blue) !important;
+}
+.nav-active-red {
+    color: var(--brand-red) !important;
+}
+.nav-active-yellow {
+    color: var(--brand-yellow) !important;
+}
 
 .nav-active-blue::after,
 .nav-active-red::after,
@@ -233,16 +267,18 @@ html, body {
 /* Navbar shrink */
 .navbar-shrink {
     padding: 10px 0 !important;
-    background: rgba(255,255,255,0.92) !important;
+    background: rgba(255, 255, 255, 0.92) !important;
     backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-    box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
 }
 
 /* ==========================================================
    FOOTER
 ========================================================== */
-footer { text-align: center; }
+footer {
+    text-align: center;
+}
 
 footer img {
     opacity: 0.95;
@@ -268,15 +304,22 @@ footer img:hover {
     animation: softFloat 6s ease-in-out infinite;
 }
 @keyframes softFloat {
-    0%,100% { transform: translateY(0); }
-    50% { transform: translateY(-4px); }
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
 }
 
 /* ==========================================================
    RESPONSIVE
 ========================================================== */
 @media (max-width: 960px) {
-    .value-grid { grid-template-columns: 1fr; }
+    .value-grid {
+        grid-template-columns: 1fr;
+    }
     .service-row,
     .service-row.reverse {
         grid-template-columns: 1fr;
@@ -284,5 +327,7 @@ footer img:hover {
     }
 }
 @media (max-width: 480px) {
-    .section-title { font-size: 1.9rem; }
+    .section-title {
+        font-size: 1.9rem;
+    }
 }
