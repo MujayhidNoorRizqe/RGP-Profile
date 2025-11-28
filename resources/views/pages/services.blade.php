@@ -2,130 +2,367 @@
 
 @section('content')
 
-{{-- HERO SECTION --}}
-<section class="relative h-[70vh] flex items-center justify-center bg-cover bg-center"
-         style="background-image: url('{{ asset('images/services-bg.jpg') }}');">
-  <div class="absolute inset-0 bg-gradient-to-b from-[#e62129]/70 via-[#00a2e9]/40 to-black/60"></div>
-  <div class="relative z-10 text-center text-white px-6" data-aos="fade-down">
-    <h1 class="text-5xl md:text-6xl font-bold mb-4">Layanan Kami</h1>
-    <p class="text-lg max-w-2xl mx-auto text-gray-100">
-      Solusi percetakan lengkap — dari desain, produksi, hingga pemasangan media promosi Anda.
-    </p>
-  </div>
-</section>
+{{-- =====================================================
+     HERO SECTION — Ultra Clean Corporate
+===================================================== --}}
+<section class="pt-40 pb-28 bg-white fade-soft">
+    <div class="max-w-6xl mx-auto px-6 text-center">
 
-{{-- INTRO --}}
-<section class="py-24 bg-gradient-to-b from-white via-[#f8fafc] to-[#eef7ff]" data-aos="fade-up">
-  <div class="max-w-6xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold text-[#00a2e9] mb-6">Kategori Utama</h2>
-    <p class="text-gray-600 max-w-3xl mx-auto mb-12">
-      Kami menyediakan tiga kategori utama untuk mendukung setiap kebutuhan promosi Anda —
-      dari cetak indoor, outdoor, hingga produk multi yang fleksibel.
-    </p>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-[#0f0f0f] leading-tight">
+            Layanan Percetakan Modern & Profesional
+        </h1>
 
-    {{-- GRID KATEGORI --}}
-    <div class="grid md:grid-cols-3 gap-10">
-      {{-- Indoor --}}
-      <div class="group relative overflow-hidden rounded-2xl shadow-xl bg-white hover:-translate-y-2 transition-all duration-500" data-aos="zoom-in">
-        <img src="{{ asset('images/service-indoor.jpg') }}" alt="Layanan Indoor"
-             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
-        <div class="absolute inset-0 bg-[#e62129]/60 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center transition-all duration-500 text-white">
-          <h3 class="text-2xl font-semibold">Indoor</h3>
-          <p class="text-sm mt-2 max-w-xs text-center text-gray-100">Produk cetak ruangan: X-Banner, poster, brosur, dan lainnya.</p>
-        </div>
-      </div>
+        <p class="text-gray-600 text-lg mt-4 max-w-2xl mx-auto">
+            Solusi percetakan lengkap yang menggabungkan teknologi terbaru,
+            konsistensi warna, dan estetika premium untuk kebutuhan visual brand masa kini.
+        </p>
 
-      {{-- Outdoor --}}
-      <div class="group relative overflow-hidden rounded-2xl shadow-xl bg-white hover:-translate-y-2 transition-all duration-500" data-aos="zoom-in" data-aos-delay="150">
-        <img src="{{ asset('images/service-outdoor.jpg') }}" alt="Layanan Outdoor"
-             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
-        <div class="absolute inset-0 bg-[#00a2e9]/60 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center transition-all duration-500 text-white">
-          <h3 class="text-2xl font-semibold">Outdoor</h3>
-          <p class="text-sm mt-2 max-w-xs text-center text-gray-100">Spanduk, billboard, baliho, dan media tahan cuaca.</p>
-        </div>
-      </div>
+        <div class="w-28 h-[3px] mx-auto mt-8 rounded-full"
+             style="background: var(--brand-blue);"></div>
 
-      {{-- Multi --}}
-      <div class="group relative overflow-hidden rounded-2xl shadow-xl bg-white hover:-translate-y-2 transition-all duration-500" data-aos="zoom-in" data-aos-delay="300">
-        <img src="{{ asset('images/service-multi.jpg') }}" alt="Layanan Multi"
-             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
-        <div class="absolute inset-0 bg-[#fef100]/60 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center transition-all duration-500 text-black">
-          <h3 class="text-2xl font-semibold">Multi</h3>
-          <p class="text-sm mt-2 max-w-xs text-center">Stiker, label, packaging, kartu nama, dan merchandise branding.</p>
-        </div>
-      </div>
     </div>
-  </div>
 </section>
 
-{{-- DETAIL LAYANAN --}}
-<section class="py-24 bg-white border-t border-gray-100" data-aos="fade-up">
-  <div class="max-w-6xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold text-[#e62129] mb-4">Detail Layanan</h2>
-    <p class="text-gray-600 mb-12 max-w-3xl mx-auto">
-      Kami menghadirkan beragam layanan profesional dengan hasil presisi dan kualitas tinggi.
+
+
+{{-- =====================================================
+     KATEGORI UTAMA — Premium Icons Section
+===================================================== --}}
+<section class="py-24 bg-[#fafafa] fade-soft">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <h2 class="section-title">Kategori Utama Layanan</h2>
+
+        <div class="w-20 h-[3px] mx-auto mt-3 mb-14 rounded-full"
+             style="background: var(--brand-yellow);"></div>
+
+        <div class="grid md:grid-cols-3 gap-14">
+
+            {{-- Indoor --}}
+            <div class="text-center group">
+                <div class="w-20 h-20 rounded-2xl mx-auto flex items-center justify-center shadow-md bg-white
+                            group-hover:-translate-y-1 transition">
+                    <img src="{{ asset('images/icons/indoor.png') }}" class="w-10 opacity-80">
+                </div>
+
+                <h3 class="font-semibold text-xl mt-6" style="color: var(--brand-blue);">Indoor Printing</h3>
+
+                <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                    Poster, brosur, booklet, signage ruangan, booth display, dan media promosi indoor lainnya.
+                </p>
+            </div>
+
+            {{-- Outdoor --}}
+            <div class="text-center group">
+                <div class="w-20 h-20 rounded-2xl mx-auto flex items-center justify-center shadow-md bg-white
+                            group-hover:-translate-y-1 transition">
+                    <img src="{{ asset('images/icons/outdoor.png') }}" class="w-10 opacity-80">
+                </div>
+
+                <h3 class="font-semibold text-xl mt-6" style="color: var(--brand-red);">Outdoor Printing</h3>
+
+                <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                    Baliho, branding kendaraan, billboard, neonbox, dan media publik berukuran besar.
+                </p>
+            </div>
+
+            {{-- Multi --}}
+            <div class="text-center group">
+                <div class="w-20 h-20 rounded-2xl mx-auto flex items-center justify-center shadow-md bg-white
+                            group-hover:-translate-y-1 transition">
+                    <img src="{{ asset('images/icons/multi.png') }}" class="w-10 opacity-80">
+                </div>
+
+                <h3 class="font-semibold text-xl mt-6" style="color: var(--brand-yellow);">Multi Product</h3>
+
+                <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                    Stiker, label produk, packaging branding, kartu nama, merchandise dan produk custom lainnya.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+{{-- =====================================================
+     SECTION — Why Work With Us
+===================================================== --}}
+<section class="py-24 bg-white fade-soft">
+    <div class="max-w-6xl mx-auto px-6">
+
+        <h2 class="section-title">Mengapa Memilih Kami?</h2>
+
+        <div class="w-20 h-[3px] mx-auto mt-3 mb-14 rounded-full"
+            style="background: var(--brand-blue);"></div>
+
+        <div class="grid md:grid-cols-4 gap-10 text-center">
+
+            <div>
+                <h3 class="font-bold text-lg text-[#0f0f0f]">Presisi Warna</h3>
+                <p class="text-gray-600 text-sm mt-2">
+                    Teknologi kalibrasi warna memastikan hasil cetak konsisten dari batch pertama hingga terakhir.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-lg text-[#0f0f0f]">Produksi Cepat</h3>
+                <p class="text-gray-600 text-sm mt-2">
+                    Workflow digital mempersingkat waktu produksi tanpa mengurangi kualitas.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-lg text-[#0f0f0f]">Material Premium</h3>
+                <p class="text-gray-600 text-sm mt-2">
+                    Bahan cetak berkualitas seperti vinyl, PVC, art paper, dan premium sticker.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-lg text-[#0f0f0f]">Kustomisasi Fleksibel</h3>
+                <p class="text-gray-600 text-sm mt-2">
+                    Semua produk bisa menyesuaikan kebutuhan brand, ukuran, finishing, dan warna.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+{{-- =====================================================
+     WORKFLOW — 1–4 Soft Steps
+===================================================== --}}
+<section class="py-24 bg-[#fafafa] fade-soft">
+    <div class="max-w-6xl mx-auto px-6">
+
+        <h2 class="section-title">Alur Kerja Profesional</h2>
+
+        <div class="w-20 h-[3px] mx-auto mt-3 mb-14 rounded-full"
+            style="background: var(--brand-yellow);"></div>
+
+        <div class="grid md:grid-cols-4 gap-10 text-center">
+
+            <div class="p-6 bg-white rounded-xl shadow-sm">
+                <div class="text-3xl font-bold text-[#0f0f0f]">01</div>
+                <h3 class="font-semibold mt-2">Konsultasi</h3>
+                <p class="text-gray-600 text-sm mt-2">Diskusi kebutuhan dan memilih jenis layanan terbaik.</p>
+            </div>
+
+            <div class="p-6 bg-white rounded-xl shadow-sm">
+                <div class="text-3xl font-bold text-[#0f0f0f]">02</div>
+                <h3 class="font-semibold mt-2">Desain</h3>
+                <p class="text-gray-600 text-sm mt-2">Tim kami membantu memastikan desain siap cetak.</p>
+            </div>
+
+            <div class="p-6 bg-white rounded-xl shadow-sm">
+                <div class="text-3xl font-bold text-[#0f0f0f]">03</div>
+                <h3 class="font-semibold mt-2">Produksi</h3>
+                <p class="text-gray-600 text-sm mt-2">Proses cetak dilakukan dengan mesin modern & material berkualitas.</p>
+            </div>
+
+            <div class="p-6 bg-white rounded-xl shadow-sm">
+                <div class="text-3xl font-bold text-[#0f0f0f]">04</div>
+                <h3 class="font-semibold mt-2">Finishing</h3>
+                <p class="text-gray-600 text-sm mt-2">Proses pemotongan, laminasi, dan pengecekan kualitas akhir.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+{{-- =====================================================
+     GALLERY — Clean Grid
+===================================================== --}}
+<section class="py-24 bg-white fade-soft">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+        <h2 class="section-title">Hasil Karya Kami</h2>
+
+        <div class="w-20 h-[3px] mx-auto mt-3 mb-14 rounded-full"
+            style="background: var(--brand-blue);"></div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            @foreach(['gallery1.jpg','gallery2.jpg','gallery3.jpg','gallery4.jpg','gallery5.jpg','gallery6.jpg'] as $img)
+                <div class="rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                    <img src="{{ asset('images/' . $img) }}"
+                         class="w-full h-56 object-cover">
+                </div>
+            @endforeach
+
+        </div>
+
+    </div>
+</section>
+
+
+{{-- =====================================================
+     CLIENT PORTFOLIO — Trusted By Many Brands
+===================================================== --}}
+<section class="py-24 bg-white fade-soft">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+
+        <h2 class="section-title">Dipercaya Banyak Brand</h2>
+
+        <div class="w-20 h-[3px] mx-auto mt-3 mb-14 rounded-full"
+             style="background: var(--brand-blue);"></div>
+
+        <p class="text-gray-600 max-w-xl mx-auto mb-12">
+            Kami telah mendukung berbagai perusahaan, event organizer, UMKM, hingga brand nasional
+            dalam memenuhi kebutuhan visual dan percetakan mereka.
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+
+            @foreach (['logo1.png','logo2.png','logo3.png','logo4.png'] as $logo)
+                <div class="opacity-60 hover:opacity-100 transition">
+                    <img src="{{ asset('images/clients/'.$logo) }}" class="mx-auto h-12 object-contain">
+                </div>
+            @endforeach
+
+        </div>
+
+    </div>
+</section>
+
+
+
+{{-- =====================================================
+     EQUIPMENT SHOWCASE — Technology We Use
+===================================================== --}}
+<section class="py-24 bg-[#fafafa] fade-soft">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <h2 class="section-title text-center">Teknologi & Peralatan Produksi</h2>
+
+        <div class="w-20 h-[3px] mx-auto mt-3 mb-14 rounded-full"
+             style="background: var(--brand-yellow);"></div>
+
+        <p class="text-gray-600 text-center max-w-3xl mx-auto mb-14">
+            Untuk menjaga kualitas dan konsistensi hasil cetak, kami menggunakan peralatan modern
+            yang telah terkalibrasi dan berstandar industri.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-10">
+
+            <div class="bg-white rounded-2xl shadow p-6">
+                <img src="{{ asset('images/equip/print1.jpg') }}"
+                    class="w-full h-48 object-cover rounded-xl mb-4">
+                <h3 class="font-semibold text-lg">Large Format Printer</h3>
+                <p class="text-gray-600 text-sm mt-2">
+                    Mesin cetak resolusi tinggi untuk kebutuhan billboard dan outdoor quality.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow p-6">
+                <img src="{{ asset('images/equip/print2.jpg') }}"
+                    class="w-full h-48 object-cover rounded-xl mb-4">
+                <h3 class="font-semibold text-lg">Indoor UV Printer</h3>
+                <p class="text-gray-600 text-sm mt-2">
+                    Hasil cetak tajam dan warna konsisten untuk kebutuhan indoor premium.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow p-6">
+                <img src="{{ asset('images/equip/print3.jpg') }}"
+                    class="w-full h-48 object-cover rounded-xl mb-4">
+                <h3 class="font-semibold text-lg">Finishing & Cutting</h3>
+                <p class="text-gray-600 text-sm mt-2">
+                    Mesin finishing otomatis untuk hasil rapi dan presisi.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+{{-- =====================================================
+     FAQ — Frequently Asked Questions
+===================================================== --}}
+<section class="py-24 bg-white fade-soft">
+    <div class="max-w-5xl mx-auto px-6">
+
+        <h2 class="section-title text-center">Pertanyaan yang Sering Diajukan</h2>
+
+        <div class="w-20 h-[3px] mx-auto mt-3 mb-12 rounded-full"
+             style="background: var(--brand-blue);"></div>
+
+        <div class="space-y-4">
+
+            {{-- FAQ 1 --}}
+            <details class="group bg-[#fafafa] p-5 rounded-xl border border-gray-200">
+                <summary class="flex justify-between items-center cursor-pointer font-medium">
+                    Berapa lama proses produksi?
+                    <span class="transition-transform group-open:rotate-180">⌄</span>
+                </summary>
+                <p class="text-gray-600 text-sm mt-3">
+                    Estimasi produksi 1–3 hari tergantung jenis produk & antrian. Produk tertentu dapat selesai dalam 24 jam.
+                </p>
+            </details>
+
+            {{-- FAQ 2 --}}
+            <details class="group bg-[#fafafa] p-5 rounded-xl border border-gray-200">
+                <summary class="flex justify-between items-center cursor-pointer font-medium">
+                    Apakah bisa request desain?
+                    <span class="transition-transform group-open:rotate-180">⌄</span>
+                </summary>
+                <p class="text-gray-600 text-sm mt-3">
+                    Ya, tim desain kami siap membantu menyiapkan file siap cetak sesuai kebutuhan Anda.
+                </p>
+            </details>
+
+            {{-- FAQ 3 --}}
+            <details class="group bg-[#fafafa] p-5 rounded-xl border border-gray-200">
+                <summary class="flex justify-between items-center cursor-pointer font-medium">
+                    Apakah menyediakan jasa pemasangan outdoor?
+                    <span class="transition-transform group-open:rotate-180">⌄</span>
+                </summary>
+                <p class="text-gray-600 text-sm mt-3">
+                    Kami menyediakan layanan pemasangan untuk billboard, baliho, branding kendaraan,
+                    signage, dan media outdoor lainnya.
+                </p>
+            </details>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+{{-- =====================================================
+     CTA — Final Premium Section
+===================================================== --}}
+<section class="py-24 bg-[#fafafa] text-center fade-soft">
+
+    <h2 class="text-3xl font-bold text-[#0f0f0f]">
+        Siap Tingkatkan Branding Bisnis Anda?
+    </h2>
+
+    <div class="w-20 h-[3px] mx-auto mt-3 mb-4 rounded-full"
+         style="background: var(--brand-yellow);"></div>
+
+    <p class="text-gray-600 max-w-xl mx-auto">
+        Kami siap membantu kebutuhan cetak Anda dengan kualitas premium, detail presisi,
+        dan pelayanan profesional.
     </p>
 
-    <div class="grid md:grid-cols-3 gap-10 text-left">
-      <div class="p-6 bg-gradient-to-b from-[#fff] to-[#f8fafc] rounded-xl shadow-md border-l-4 border-[#e62129]" data-aos="fade-right">
-        <h3 class="text-xl font-semibold mb-2 text-[#e62129]">Layanan Indoor</h3>
-        <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm">
-          <li>X-Banner & Roll Up Banner</li>
-          <li>Poster & Brosur</li>
-          <li>Katalog & Booklet</li>
-          <li>Backdrop Event</li>
-        </ul>
-      </div>
+    <a href="{{ route('contact') }}" class="btn-primary mt-8 inline-block">
+        Hubungi Kami
+    </a>
 
-      <div class="p-6 bg-gradient-to-b from-[#fff] to-[#f8fafc] rounded-xl shadow-md border-l-4 border-[#00a2e9]" data-aos="fade-up">
-        <h3 class="text-xl font-semibold mb-2 text-[#00a2e9]">Layanan Outdoor</h3>
-        <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm">
-          <li>Billboard & Baliho</li>
-          <li>Neon Box & Sign Board</li>
-          <li>Branding Kendaraan</li>
-          <li>Banner Tahan Cuaca</li>
-        </ul>
-      </div>
-
-      <div class="p-6 bg-gradient-to-b from-[#fff] to-[#f8fafc] rounded-xl shadow-md border-l-4 border-[#fef100]" data-aos="fade-left">
-        <h3 class="text-xl font-semibold mb-2 text-[#fef100]">Layanan Multi</h3>
-        <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm">
-          <li>Stiker & Label Produk</li>
-          <li>Kartu Nama & ID Card</li>
-          <li>Pouch & Kemasan Produk</li>
-          <li>Merchandise Promosi</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-{{-- GALLERY --}}
-<section class="py-24 bg-gray-50 border-t" data-aos="fade-up">
-  <div class="max-w-7xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold text-[#00a2e9] mb-6">Hasil Karya Kami</h2>
-    <p class="text-gray-600 mb-12 max-w-3xl mx-auto">Beberapa dokumentasi hasil cetak dan pemasangan yang telah kami kerjakan untuk berbagai klien.</p>
-
-    <div class="grid md:grid-cols-3 gap-6">
-      @foreach (['gallery1.jpg', 'gallery2.jpg', 'gallery3.jpg', 'gallery4.jpg', 'gallery5.jpg', 'gallery6.jpg'] as $img)
-        <div class="relative group overflow-hidden rounded-xl shadow-md" data-aos="zoom-in">
-          <img src="{{ asset('images/' . $img) }}" alt="Gallery" class="w-full h-56 object-cover group-hover:scale-110 transition duration-700">
-          <div class="absolute inset-0 bg-[#000]/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-500">
-            <i class="fa-solid fa-magnifying-glass text-white text-3xl"></i>
-          </div>
-        </div>
-      @endforeach
-    </div>
-  </div>
-</section>
-
-{{-- CTA --}}
-<section class="py-20 bg-gradient-to-r from-[#e62129] to-[#00a2e9] text-white text-center" data-aos="zoom-in">
-  <h2 class="text-3xl font-bold mb-4">Ingin Cetak Sekarang?</h2>
-  <p class="mb-6 max-w-2xl mx-auto text-gray-100">Hubungi kami untuk konsultasi gratis dan dapatkan hasil cetak terbaik dengan harga kompetitif.</p>
-  <a href="{{ route('contact') }}" class="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-[#fef100] transition">
-    Hubungi Kami
-  </a>
 </section>
 
 @endsection

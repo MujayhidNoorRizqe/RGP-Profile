@@ -31,10 +31,10 @@
         <div class="text-center md:text-left">
             <h4 class="font-semibold text-gray-900 mb-4">Navigasi</h4>
             <ul class="space-y-2 text-sm text-gray-600">
-                <li><a href="{{ route('home') }}" class="footer-link">Home</a></li>
-                <li><a href="{{ route('about') }}" class="footer-link">Tentang</a></li>
-                <li><a href="{{ route('services') }}" class="footer-link">Layanan</a></li>
-                <li><a href="{{ route('contact') }}" class="footer-link">Kontak</a></li>
+                <li><a href="{{ route('home') }}" class="footer-link rg-hover">Home</a></li>
+                <li><a href="{{ route('about') }}" class="footer-link rg-hover">Tentang</a></li>
+                <li><a href="{{ route('services') }}" class="footer-link rg-hover">Layanan</a></li>
+                <li><a href="{{ route('contact') }}" class="footer-link rg-hover">Kontak</a></li>
             </ul>
         </div>
 
@@ -43,9 +43,9 @@
         <div class="text-center md:text-left">
             <h4 class="font-semibold text-gray-900 mb-4">Layanan</h4>
             <ul class="space-y-2 text-sm text-gray-600">
-                <li><a href="{{ route('services') }}" class="footer-link">Indoor Printing</a></li>
-                <li><a href="{{ route('services') }}" class="footer-link">Outdoor Printing</a></li>
-                <li><a href="{{ route('services') }}" class="footer-link">Merch & Multi Product</a></li>
+                <li><a href="{{ route('services') }}" class="footer-link rg-hover">Indoor Printing</a></li>
+                <li><a href="{{ route('services') }}" class="footer-link rg-hover">Outdoor Printing</a></li>
+                <li><a href="{{ route('services') }}" class="footer-link rg-hover">Merch & Multi Product</a></li>
             </ul>
         </div>
 
@@ -56,45 +56,33 @@
             <!-- SOSIAL MEDIA -->
             <h4 class="font-semibold text-gray-900 mb-4">Ikuti Kami</h4>
             <ul class="space-y-2 text-sm text-gray-600 mb-6">
-                <li><a href="#" class="footer-link flex items-center gap-2 md:justify-start justify-center">
-                    <span>📘</span> Facebook</a>
+                <li>
+                    <a href="#" class="footer-link flex items-center gap-2 md:justify-start justify-center rg-hover">
+                        <span>📘</span> Facebook
+                    </a>
                 </li>
-                <li><a href="#" class="footer-link flex items-center gap-2 md:justify-start justify-center">
-                    <span>📷</span> Instagram</a>
+                <li>
+                    <a href="#" class="footer-link flex items-center gap-2 md:justify-start justify-center rg-hover">
+                        <span>📷</span> Instagram
+                    </a>
                 </li>
-                <li><a href="#" class="footer-link flex items-center gap-2 md:justify-start justify-center">
-                    <span>▶️</span> YouTube</a>
+                <li>
+                    <a href="#" class="footer-link flex items-center gap-2 md:justify-start justify-center rg-hover">
+                        <span>▶️</span> YouTube
+                    </a>
                 </li>
             </ul>
 
             <!-- MULTI LOKASI -->
             <h4 class="font-semibold text-gray-900 mb-2 text-sm">Lokasi Kantor</h4>
+
             <ul class="space-y-2 text-sm text-gray-600">
-
-                <li class="flex gap-2 md:justify-start justify-center">
-                    <span>📍</span> Banjarbaru
-                </li>
-
-                <li class="flex gap-2 md:justify-start justify-center">
-                    <span>📍</span> Banjar
-                </li>
-
-                <li class="flex gap-2 md:justify-start justify-center">
-                    <span>📍</span> Banjarmasin
-                </li>
-
-                <li class="flex gap-2 md:justify-start justify-center">
-                    <span>📍</span> Martapura
-                </li>
-
-                <li class="flex gap-2 md:justify-start justify-center">
-                    <span>📍</span> Lianganggang
-                </li>
-
-                <li class="flex gap-2 md:justify-start justify-center">
-                    <span>📍</span> Pelaihari
-                </li>
-
+                <li class="flex gap-2 md:justify-start justify-center"><span>📍</span> Banjarbaru</li>
+                <li class="flex gap-2 md:justify-start justify-center"><span>📍</span> Banjar</li>
+                <li class="flex gap-2 md:justify-start justify-center"><span>📍</span> Banjarmasin</li>
+                <li class="flex gap-2 md:justify-start justify-center"><span>📍</span> Martapura</li>
+                <li class="flex gap-2 md:justify-start justify-center"><span>📍</span> Lianganggang</li>
+                <li class="flex gap-2 md:justify-start justify-center"><span>📍</span> Pelaihari</li>
             </ul>
         </div>
 
@@ -102,8 +90,7 @@
 
     <!-- COPYRIGHT -->
     <div class="text-center mt-12 pt-6 border-t border-gray-200">
-        <div class="w-28 h-1 mx-auto mb-4 rounded-full"
-             style="background: linear-gradient(90deg, var(--brand-blue), var(--brand-red));"></div>
+        <div class="w-32 h-1 mx-auto mb-4 rounded-full rg-bar"></div>
 
         <p class="text-gray-400 text-xs">
             © {{ date('Y') }} Restu Guru Promosindo — All rights reserved.
