@@ -48,19 +48,19 @@
         <div class="value-grid">
 
             <div class="value-item hover:shadow-lg transition">
-                <img src="{{ asset('images/service-indoor.jpg') }}" class="value-img" style="height: 160px;">
+                <img src="{{ asset('images/Why Choose Us 1.jpg') }}" class="value-img" style="height: 160px;">
                 <h3 class="text-lg font-semibold mt-3">High Precision</h3>
                 <p class="text-gray-600 text-sm mt-1">Kualitas cetak detail & warna akurat.</p>
             </div>
 
             <div class="value-item hover:shadow-lg transition">
-                <img src="{{ asset('images/service-outdoor.jpg') }}" class="value-img" style="height: 160px;">
+                <img src="{{ asset('images/Why Choose Us 2.jpg') }}" class="value-img" style="height: 160px;">
                 <h3 class="text-lg font-semibold mt-3">Consistent Color</h3>
                 <p class="text-gray-600 text-sm mt-1">Stabil dari batch pertama sampai terakhir.</p>
             </div>
 
             <div class="value-item hover:shadow-lg transition">
-                <img src="{{ asset('images/service-multi.jpg') }}" class="value-img" style="height: 160px;">
+                <img src="{{ asset('images/Why Choose Us 3.jpg') }}" class="value-img" style="height: 160px;">
                 <h3 class="text-lg font-semibold mt-3">On-Time Delivery</h3>
                 <p class="text-gray-600 text-sm mt-1">Tepat waktu & proses produksi efisien.</p>
             </div>
@@ -85,7 +85,7 @@
             </div>
 
             <div class="service-image">
-                <img src="{{ asset('images/service-indoor.jpg') }}"
+                <img src="{{ asset('images/Our Services 1.jpg') }}"
                     class="rounded-2xl"
                     style="height: 260px; box-shadow: none;">
             </div>
@@ -100,7 +100,7 @@
             </div>
 
             <div class="service-image">
-                <img src="{{ asset('images/service-outdoor.jpg') }}"
+                <img src="{{ asset('images/Our Services 2.jpg') }}"
                     class="rounded-2xl"
                     style="height: 260px;">
             </div>
@@ -115,7 +115,7 @@
             </div>
 
             <div class="service-image">
-                <img src="{{ asset('images/service-multi.jpg') }}"
+                <img src="{{ asset('images/Our Services 3.jpg') }}"
                     class="rounded-2xl"
                     style="height: 260px;">
             </div>

@@ -13,7 +13,8 @@
         <div class="max-w-3xl mx-auto px-6">
 
             <h1 class="hero-title font-extrabold text-[3rem]">
-                <span class="hero-blue">Hubungi</span>
+                <span class="hero-blue">Ayo</span>
+                <span class="hero-yellow">Hubungi</span>
                 <span class="hero-red">Kami</span>
             </h1>
 

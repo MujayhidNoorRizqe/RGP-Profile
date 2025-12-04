@@ -2,16 +2,16 @@
    PAGE FADE-IN + REMOVE OVERLAY
 ========================================================== */
 window.addEventListener("load", () => {
-    const bodyRoot = document.getElementById("body-root");
-    if (bodyRoot) bodyRoot.classList.remove("opacity-0");
+    const root = document.getElementById("body-root");
+    if (root) root.classList.remove("opacity-0");
 
     const overlay = document.getElementById("overlay");
     if (overlay) {
         overlay.style.opacity = "0";
-        setTimeout(() => overlay.remove(), 500);
+        setTimeout(() => overlay.remove(), 550);
     }
 
-    /* INIT AOS (CDN) - Soft Motion */
+    /* INIT AOS */
     if (window.AOS) {
         AOS.init({
             duration: 850,
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* ==========================================================
-   PAGE FADE-OUT → Smooth Navigation
+   PAGE FADE-OUT ON LINK CLICK (Smooth Navigation)
 ========================================================== */
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("a[href]").forEach((link) => {
@@ -63,13 +63,13 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
             const root = document.getElementById("body-root");
             if (root) root.style.opacity = "0";
-            setTimeout(() => (window.location = url), 280);
+            setTimeout(() => (window.location = url), 260);
         });
     });
 });
 
 /* ==========================================================
-   MICRO PARALLAX (Super Soft)
+   MICRO PARALLAX (Soft & Light)
 ========================================================== */
 window.addEventListener("scroll", () => {
     document.querySelectorAll("[data-micro-parallax]").forEach((el) => {

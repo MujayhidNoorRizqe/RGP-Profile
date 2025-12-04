@@ -13,7 +13,11 @@
         <div class="max-w-6xl mx-auto px-6 text-center">
 
             <h1 class="text-4xl md:text-5xl font-extrabold text-[#0f0f0f] leading-tight">
-                Layanan Percetakan Modern & Profesional
+                <span class="hero-dark">Layanan</span>
+                <span class="hero-blue">Percetakan</span>
+                <span class="hero-yellow">Modern</span>
+                <span class="hero-dark">&</span>
+                <span class="hero-red">Profesional</span>
             </h1>
 
             <p class="text-gray-600 text-lg mt-4 max-w-2xl mx-auto">

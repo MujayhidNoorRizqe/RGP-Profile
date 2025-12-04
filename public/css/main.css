@@ -12,8 +12,15 @@ body {
     padding: 0;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s;
+    will-change: transform;
+}
+
 /* ==========================================================
-   COLOR SYSTEM + GLOBAL GRADIENT
+   COLOR SYSTEM + GRADIENT
 ========================================================== */
 :root {
     --brand-red: #e62129;
@@ -53,6 +60,11 @@ body {
     color: var(--text-dark);
 }
 
+.hero-title {
+    font-size: 3.6rem;
+    font-weight: 800;
+    line-height: 1.15;
+}
 .hero-title span {
     transition: opacity 0.25s ease;
 }
@@ -60,18 +72,59 @@ body {
     opacity: 0.85;
 }
 
+/* Mobile hero title */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.2rem !important;
+        line-height: 1.25;
+    }
+}
+
 /* ==========================================================
-   PAGE FADE-IN
+   ANIMATIONS — Fade Soft, Stagger, Float
 ========================================================== */
-.page-enter {
+.fade-soft {
     opacity: 0;
     transform: translateY(20px);
-    animation: pageEnterAnim 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: fadeSoftAnim 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
-@keyframes pageEnterAnim {
+@keyframes fadeSoftAnim {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+.fade-delay-1 {
+    animation-delay: 0.15s;
+}
+.fade-delay-2 {
+    animation-delay: 0.3s;
+}
+.fade-delay-3 {
+    animation-delay: 0.45s;
+}
+
+.soft-float {
+    animation: softFloat 5.5s ease-in-out infinite;
+    will-change: transform;
+}
+@keyframes softFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+/* Mobile disable heavy animation */
+@media (max-width: 480px) {
+    .soft-float {
+        animation: none;
+    }
+    img:hover {
+        transform: none !important;
     }
 }
 
@@ -96,32 +149,28 @@ body {
     color: var(--text-light);
 }
 
-/* ==========================================================
-   HERO TITLE STYLE
-========================================================== */
-.hero-title {
-    font-size: 3.6rem;
-    font-weight: 800;
-    line-height: 1.15;
+@media (max-width: 960px) {
+    .section-box {
+        padding: 70px 0;
+    }
 }
-
-/* Small screens */
 @media (max-width: 480px) {
-    .hero-title {
-        font-size: 2.2rem !important;
-        line-height: 1.25;
+    .section-box {
+        padding: 50px 0;
+    }
+    .section-title {
+        font-size: 1.9rem;
     }
 }
 
 /* ==========================================================
-   VALUE GRID (Home)
+   VALUE GRID
 ========================================================== */
 .value-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 42px;
 }
-
 .value-item {
     text-align: center;
 }
@@ -133,15 +182,23 @@ body {
     border-radius: 20px;
     margin-bottom: 16px;
     box-shadow: 0 10px 28px var(--soft-shadow);
-    transition: 0.35s ease;
 }
 .value-img:hover {
     transform: scale(1.03);
     box-shadow: 0 14px 36px var(--mid-shadow);
 }
 
+@media (max-width: 960px) {
+    .value-grid {
+        grid-template-columns: 1fr;
+    }
+    .value-img {
+        height: 150px;
+    }
+}
+
 /* ==========================================================
-   SERVICE ROWS
+   SERVICE ROWS (Home)
 ========================================================== */
 .service-row {
     display: grid;
@@ -151,7 +208,7 @@ body {
     align-items: center;
 }
 
-/* FIX: Remove old RTL method, replace with Tailwind ordering */
+/* Replace RTL with order method */
 .service-row.reverse .service-text {
     order: 2;
 }
@@ -159,7 +216,6 @@ body {
     order: 1;
 }
 
-/* Mobile automatically becomes 1 column */
 @media (max-width: 960px) {
     .service-row {
         grid-template-columns: 1fr;
@@ -176,10 +232,15 @@ body {
     object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 12px 28px var(--soft-shadow);
-    transition: 0.35s ease;
 }
 .service-image img:hover {
     transform: scale(1.02);
+}
+
+@media (max-width: 480px) {
+    .service-image img {
+        height: 220px;
+    }
 }
 
 /* ==========================================================
@@ -189,13 +250,11 @@ body {
     padding: 100px 0;
     text-align: center;
 }
-
 .cta-section h2 {
     font-size: 2.3rem;
     font-weight: 700;
     color: var(--text-dark);
 }
-
 .cta-desc {
     max-width: 520px;
     margin: 12px auto 34px;
@@ -222,7 +281,6 @@ body {
     box-shadow: 0 8px 18px var(--mid-shadow);
 }
 
-/* Mobile buttons */
 @media (max-width: 480px) {
     .btn-primary {
         width: 100%;
@@ -240,8 +298,8 @@ body {
 .nav-link {
     color: #444;
     position: relative;
-    transition: color 0.28s ease;
     padding-bottom: 4px;
+    transition: color 0.28s ease;
 }
 .nav-link:hover {
     color: var(--brand-blue);
@@ -262,7 +320,6 @@ body {
     width: 100%;
 }
 
-/* Active */
 .nav-active-blue {
     color: var(--brand-blue) !important;
 }
@@ -273,7 +330,6 @@ body {
     color: var(--brand-yellow) !important;
 }
 
-/* Shrink */
 .navbar-shrink {
     padding: 10px 0 !important;
     background: rgba(255, 255, 255, 0.92) !important;
@@ -307,44 +363,8 @@ footer img:hover {
 }
 
 /* ==========================================================
-   MICRO INTERACTIONS
+   MICRO PARALLAX SAFE
 ========================================================== */
-.soft-float {
-    animation: softFloat 6s ease-in-out infinite;
-}
-@keyframes softFloat {
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-4px);
-    }
-}
-
-/* ==========================================================
-   FULL RESPONSIVE OPTIMIZATION
-========================================================== */
-@media (max-width: 960px) {
-    .section-box {
-        padding: 70px 0;
-    }
-    .value-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .section-title {
-        font-size: 1.9rem;
-    }
-    .section-box {
-        padding: 50px 0;
-    }
-    .service-image img {
-        height: 220px;
-    }
-    .value-img {
-        height: 150px;
-    }
+[data-micro-parallax] {
+    will-change: transform;
 }
