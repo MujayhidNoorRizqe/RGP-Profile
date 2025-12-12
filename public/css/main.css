@@ -72,7 +72,6 @@ img {
     opacity: 0.85;
 }
 
-/* Mobile hero title */
 @media (max-width: 480px) {
     .hero-title {
         font-size: 2.2rem !important;
@@ -81,11 +80,13 @@ img {
 }
 
 /* ==========================================================
-   ANIMATIONS — Fade Soft, Stagger, Float
+   FIX — Fade-soft
 ========================================================== */
 .fade-soft {
     opacity: 0;
     transform: translateY(20px);
+}
+.fade-show {
     animation: fadeSoftAnim 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 @keyframes fadeSoftAnim {
@@ -104,6 +105,7 @@ img {
     animation-delay: 0.45s;
 }
 
+/* Floating Animation */
 .soft-float {
     animation: softFloat 5.5s ease-in-out infinite;
     will-change: transform;
@@ -118,7 +120,6 @@ img {
     }
 }
 
-/* Mobile disable heavy animation */
 @media (max-width: 480px) {
     .soft-float {
         animation: none;
@@ -134,14 +135,12 @@ img {
 .section-box {
     padding: 100px 0;
 }
-
 .section-title {
     font-size: 2.4rem;
     font-weight: 700;
     text-align: center;
     color: var(--text-dark);
 }
-
 .section-desc {
     text-align: center;
     max-width: 540px;
@@ -174,7 +173,6 @@ img {
 .value-item {
     text-align: center;
 }
-
 .value-img {
     width: 100%;
     height: 200px;
@@ -198,7 +196,7 @@ img {
 }
 
 /* ==========================================================
-   SERVICE ROWS (Home)
+   SERVICE ROWS
 ========================================================== */
 .service-row {
     display: grid;
@@ -207,8 +205,6 @@ img {
     margin-bottom: 90px;
     align-items: center;
 }
-
-/* Replace RTL with order method */
 .service-row.reverse .service-text {
     order: 2;
 }
@@ -339,7 +335,7 @@ img {
 }
 
 /* ==========================================================
-   FOOTER
+   FOOTER BASE
 ========================================================== */
 footer {
     text-align: center;
@@ -363,8 +359,34 @@ footer img:hover {
 }
 
 /* ==========================================================
-   MICRO PARALLAX SAFE
+   FOOTER — BRAND COLOR HOVER RULES
 ========================================================== */
-[data-micro-parallax] {
-    will-change: transform;
+
+/* NAVIGASI → Biru */
+.footer-nav a:hover {
+    color: var(--brand-blue) !important;
+}
+
+/* LAYANAN → Kuning */
+.footer-service a:hover {
+    color: var(--brand-yellow) !important;
+}
+
+/* LOKASI → Merah */
+.footer-location a:hover {
+    color: var(--brand-red) !important;
+}
+
+/* Instagram → Kuning */
+.footer-social-instagram:hover,
+.footer-social-instagram:hover svg {
+    color: var(--brand-yellow) !important;
+    border-color: var(--brand-yellow) !important;
+}
+
+/* YouTube → Merah */
+.footer-social-youtube:hover,
+.footer-social-youtube:hover svg {
+    color: var(--brand-red) !important;
+    border-color: var(--brand-red) !important;
 }

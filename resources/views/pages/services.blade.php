@@ -48,7 +48,7 @@
                                 group-hover:-translate-y-1 transition">
                         <img src="{{ asset('images/icons/indoor.png') }}" class="w-10 opacity-80">
                     </div>
-                    <h3 class="font-semibold text-xl mt-6" style="color: var(--brand-blue);">Indoor Printing</h3>
+                    <h3 class="font-semibold text-xl mt-6" style="color: var(--brand-red);">Indoor Printing</h3>
                     <p class="text-gray-600 text-sm mt-3 leading-relaxed">
                         Poster, signage indoor, booth display, booklet & brosur.
                     </p>
@@ -59,7 +59,7 @@
                                 group-hover:-translate-y-1 transition">
                         <img src="{{ asset('images/icons/outdoor.png') }}" class="w-10 opacity-80">
                     </div>
-                    <h3 class="font-semibold text-xl mt-6" style="color: var(--brand-red);">Outdoor Printing</h3>
+                    <h3 class="font-semibold text-xl mt-6" style="color: var(--brand-blue);">Outdoor Printing</h3>
                     <p class="text-gray-600 text-sm mt-3 leading-relaxed">
                         Baliho, billboard, branding kendaraan, neonbox, banner tahan cuaca.
                     </p>

@@ -8,7 +8,7 @@
 
         {{-- LOGO --}}
         <a href="{{ route('home') }}" class="flex items-center gap-3 group">
-            <img src="{{ asset('images/Logo Restu Guru Promosindo.webp') }}"
+            <img src="{{ asset('images/logo-restu-guru-promosindo.webp') }}"
                  class="h-10 w-auto transition-transform duration-300 group-hover:scale-105">
             <span class="font-bold text-lg tracking-tight text-gray-900">
                 Restu Guru Promosindo
