@@ -1,4 +1,6 @@
-@extends('layouts.app') @section('content')
+@extends('adversting.layouts.app')
+
+@section('content')
 
 {{-- =====================================================
     ABOUT — DESKTOP VERSION (md ke atas)
